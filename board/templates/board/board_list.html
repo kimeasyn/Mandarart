@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-FzkHk/sZxl/KbNoSMiA0TgjqdV7ka8VPX/i/Nf2EyhH28i1EVaZ7uf2EEDBBHBo5" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr>
+        <th>제목</th>
+        <th>작성일</th>
+    </tr>
+    {% for goal in board_list %}
+        <tr>
+            <td>#{{ goal.writer }} 님의 {{ goal.main_goal }} 목표</td>
+            <td>{{ goal.ins_dt|timesince }} 전 작성 </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
