@@ -9,7 +9,7 @@ class MainGoalAdmin(admin.ModelAdmin):
 
 @admin.register(SubGoal)
 class SubGoalAdmin(admin.ModelAdmin):
-    list_display = ['main_goal', 'sub_goal']
+    list_display = ['id', 'main_goal', 'sub_goal']
 
 
 @admin.register(AchWay)
