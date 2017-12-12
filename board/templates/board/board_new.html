@@ -1,7 +1,7 @@
 {% extends 'board/layout.html' %}
 {% block banner %}
     <div>
-        <h3> {{ maingoal.writer }}님의 {{ maingoal }} 목표를 응원합니다. </h3>
+        <h3> 목표를 응원합니다. </h3>
     </div>
 {% endblock %}
 {% block content %}
@@ -10,7 +10,7 @@
             <table class="table table-bordered">
                 <tr id="line1" class="table-active">
                     <td>
-                        <div>{{ achway11.ach_way }}</div>
+                        <div></div>
                     </td>
                     <td>
                         <div></div>
@@ -42,7 +42,7 @@
                         <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal1.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
                         <div></div>
@@ -106,13 +106,13 @@
                         <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal1.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal2.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal3.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
                         <div></div>
@@ -135,13 +135,13 @@
                         <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal4.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ maingoal.main_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal5.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
                         <div></div>
@@ -164,13 +164,13 @@
                         <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal6.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal7.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
-                        <div>{{ subgoal8.sub_goal }}</div>
+                        <div></div>
                     </td>
                     <td>
                         <div></div>
@@ -272,9 +272,12 @@
             </table>
         </div>
         <div id="form-wrapper">
-            <form>
-                <input class="btn btn-success" type="submit" value="출력">
-                <input class="btn btn-info" type="submit" value="출력">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input class="btn btn-primary" type="submit">
             </form>
         </div>
     </div>
