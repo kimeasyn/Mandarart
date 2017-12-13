@@ -1,4 +1,10 @@
 {% extends 'board/layout.html' %}
+{% block script %}
+    {% load static %}
+    <script type="text/javascript" src="{% static "board/board_new.js" %}">
+    </script>
+
+{% endblock %}
 {% block banner %}
     <div>
         <h3> 쓰기쓰기쓰기. </h3>
@@ -272,13 +278,27 @@
             </table>
         </div>
         <div id="form-wrapper">
-            <form action="" method="POST">
-                {% csrf_token %}
-                <table>
-                    {{ form.as_table }}
-                </table>
-                <input class="btn btn-primary" type="submit">
-            </form>
+            <div id="main_input">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ main_form.as_table }}
+                    </table>
+                    <input class="btn btn-primary" type="submit">
+                </form>
+            </div>
+            <div id="button_area">
+                <button class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
+            </div>
+            <div id="sub_input" class="sub_input">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ sub_form1.as_table }}
+                    </table>
+                    <input class="btn btn-primary" type="submit">
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

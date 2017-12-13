@@ -12,3 +12,14 @@ class MainForm(forms.Form):
     sub_goal6 = forms.CharField(max_length=30, label='세부 목표 6')
     sub_goal7 = forms.CharField(max_length=30, label='세부 목표 7')
     sub_goal8 = forms.CharField(max_length=30, label='세부 목표 8')
+
+
+class SubForm1(forms.Form):
+    ach_way1 = forms.CharField(max_length=50, label='달성 방법 1')
+    ach_way2 = forms.CharField(max_length=50, label='달성 방법 2')
+    ach_way3 = forms.CharField(max_length=50, label='달성 방법 3')
+    ach_way4 = forms.CharField(max_length=50, label='달성 방법 4')
+    ach_way5 = forms.CharField(max_length=50, label='달성 방법 5')
+    ach_way6 = forms.CharField(max_length=50, label='달성 방법 6')
+    ach_way7 = forms.CharField(max_length=50, label='달성 방법 7')
+    ach_way8 = forms.CharField(max_length=50, label='달성 방법 8')

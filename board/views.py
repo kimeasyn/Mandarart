@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import MainGoal, SubGoal, AchWay
 from django.shortcuts import get_object_or_404
-from .forms import MainForm
+from .forms import MainForm, SubForm1
 # Create your views here.
 
 
@@ -44,7 +44,8 @@ def board_detail(request, id):
 
 def board_new(request):
     if request.method == 'POST':
-        form = MainForm(request.POST, request.FILES)
+        main_form = MainForm(request.POST)
+        sub_form1 = SubForm1(request.POST)
 
         if form.is_valid():
             maingoal = MainGoal()
@@ -111,8 +112,13 @@ def board_new(request):
 
             return redirect('board:board_list')
     else:
-        form = MainForm()
+        main_form = MainForm()
+        sub_form1 = SubForm1()
+
 
     return render(request, 'board/board_new.html', {
-        'form': form,
+        'main_form': main_form,
+        'sub_form1': sub_form1,
+
+
     })
