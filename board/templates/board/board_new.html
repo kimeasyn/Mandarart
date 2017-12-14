@@ -279,12 +279,12 @@
         </div>
         <div id="form-wrapper">
             <div id="main_input">
-                <form action="" method="POST">
+                <form id="main_form" action="" method="POST">
                     {% csrf_token %}
                     <table>
                         {{ main_form.as_table }}
                     </table>
-                    <button id="delete_button "type="button" class="btn btn-secondary">지우기</button>
+                    <button id="delete_button" type="button" class="btn btn-secondary">지우기</button>
                     <input class="btn btn-primary" type="submit">
                 </form>
             </div>

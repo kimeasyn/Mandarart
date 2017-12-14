@@ -8,8 +8,10 @@ $(document).ready(function(){
 function setEvent(){
 
     $("#delete_button").click(function(){
-        alert("@");
-        $("form").find("input[type=text], textarea").val("");
+        $("form").each(function(){
+            var input = $(this).find(':input')
+            input.val('');
+        });
     });
 
     $('#sub1_toggle_btn').click(function(){

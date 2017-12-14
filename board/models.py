@@ -20,6 +20,7 @@ class MainGoal(models.Model):
 
 class SubGoal(models.Model):
     main_goal = models.ForeignKey(MainGoal)
+    sub_id = models.SmallIntegerField()
     sub_goal = models.CharField(max_length=30)
     ins_dt = models.DateTimeField(auto_now_add=True)
     upd_dt = models.DateTimeField(auto_now=True)
