@@ -114,10 +114,10 @@ def board_new(request):
 
             return redirect('board:board_list')
     else:
-        main_form = MainForm()
+        # main_form = MainForm()
         sub_form1 = SubForm1()
 
     return render(request, 'board/board_new.html', {
-        'main_form': main_form,
+        # 'main_form': main_form,
         'sub_form1': sub_form1,
     })

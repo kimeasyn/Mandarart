@@ -282,14 +282,41 @@
                 <form id="main_form" action="" method="POST">
                     {% csrf_token %}
                     <table>
-                        {{ main_form.as_table }}
+                        <tr>
+                            <th>핵심 목표 :</th>
+                            <td>
+                                <input type="text" name="main_goal" maxlength="20" required="" id="id_main_goal">
+                            </td>
+                            <td>
+                                <button class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>작성자 :</th>
+                            <td>
+                                <input type="text" name="writer" maxlength="30" required="" id="id_writer">
+                            </td>
+                            <td>
+                                <button type="button" class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
+                            </td>
+                        </tr>
+                        {% for index in '12345678' %}
+                            <tr>
+                                <th>세부 목표 {{ index }} :</th>
+                                <td>
+                                    <input type="text" name="sub_goal{{ index }}" maxlength="30" required="" id="id_sub_goal{{ index }}">
+                                </td>
+                                <td>
+                                    <button type="button" class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
+                                </td>
+                            </tr>
+                        {% endfor %}
                     </table>
                     <button id="delete_button" type="button" class="btn btn-secondary">지우기</button>
                     <input class="btn btn-primary" type="submit">
                 </form>
             </div>
             <div id="button_area">
-                <button class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
             </div>
             <div id="sub_input" class="sub_input">
                 <form action="" method="POST">

@@ -2,7 +2,7 @@ $(document).ready(function(){
     startpage();
     setEvent();
     setInputTagChangeEvent();
-    alert("!");
+
 });
 
 function setEvent(){
