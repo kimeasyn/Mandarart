@@ -5,11 +5,9 @@
             <th>제목</th>
             <th>작성일</th>
         </tr>
-        {% for goal in board_list %}
-            <tr>
-                <td>#{{ goal.writer }} 님의 {{ goal.main_goal }} 목표</td>
-                <td>{{ goal.ins_dt|timesince }} 전 작성 </td>
-            </tr>
-        {% endfor %}
+{#        {% for goal in board_list %}#}
+{#            {% if forloop.counter % 3 == 1 %}#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
     </table>
 {% endblock %}

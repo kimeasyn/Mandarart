@@ -15,30 +15,24 @@ def board_list(request):
 
 def board_detail(request, id):
     maingoal = get_object_or_404(MainGoal, id=id)
-
-    # sub_id 로직 재구현 필요
-    # sub_id = ((int(id) - 1) * 8) + 1
-    subgoal1 = SubGoal.objects.get(main_goal=maingoal, sub_id=1)
-    subgoal2 = SubGoal.objects.get(main_goal=maingoal, sub_id=2)
-    subgoal3 = SubGoal.objects.get(main_goal=maingoal, sub_id=3)
-    subgoal4 = SubGoal.objects.get(main_goal=maingoal, sub_id=4)
-    subgoal5 = SubGoal.objects.get(main_goal=maingoal, sub_id=5)
-    subgoal6 = SubGoal.objects.get(main_goal=maingoal, sub_id=6)
-    subgoal7 = SubGoal.objects.get(main_goal=maingoal, sub_id=7)
-    subgoal8 = SubGoal.objects.get(main_goal=maingoal, sub_id=8)
+    subgoal_list = []
+    for index in range(1, 9):
+        if SubGoal.objects.get(main_goal=maingoal, sub_id=index):
+            subgoal_list.append(SubGoal.objects.get(main_goal=maingoal, sub_id=index))
+        else:
+            subgoal_list.append('')
 
     # achway11 = AchWay.objects.get(sub_goal=subgoal1, id=1)
     return render(request, 'board/board_detail.html', {
         'maingoal': maingoal,
-        'subgoal1': subgoal1,
-        'subgoal2': subgoal2,
-        'subgoal3': subgoal3,
-        'subgoal4': subgoal4,
-        'subgoal5': subgoal5,
-        'subgoal6': subgoal6,
-        'subgoal7': subgoal7,
-        'subgoal8': subgoal8,
-        # 'achway11': achway11,
+        'subgoal1': subgoal_list[0],
+        'subgoal2': subgoal_list[1],
+        'subgoal3': subgoal_list[2],
+        'subgoal4': subgoal_list[3],
+        'subgoal5': subgoal_list[4],
+        'subgoal6': subgoal_list[5],
+        'subgoal7': subgoal_list[6],
+        'subgoal8': subgoal_list[7],
     })
 
 

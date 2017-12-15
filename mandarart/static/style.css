@@ -37,3 +37,6 @@ td > div{
     width: 50px;
     text-align: center;
 }
+th{
+    text-align:center;
+}
