@@ -327,6 +327,15 @@
                     <input class="btn btn-primary" type="submit">
                 </form>
             </div>
+            <div id="sub_input" class="sub_input">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ sub_form1.as_table }}
+                    </table>
+                    <input class="btn btn-primary" type="submit">
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

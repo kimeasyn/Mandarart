@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import MainGoal, SubGoal, AchWay
 from django.shortcuts import get_object_or_404
-from .forms import MainForm, SubForm1
+from .forms import MainForm, SubForm1, SubForm2
 # Create your views here.
 
 
@@ -48,76 +48,85 @@ def board_new(request):
             maingoal.save()
             main_id = maingoal.id
 
-            ################################
-            subgoal1 = SubGoal()
-            subgoal1.main_goal = maingoal
-            subgoal1.sub_goal = main_form.cleaned_data['sub_goal1']
-            subgoal1.sub_id = 1
-
-            subgoal1.save()
-
-            ################################
-            subgoal2 = SubGoal()
-            subgoal2.main_goal = maingoal
-            subgoal2.sub_goal = main_form.cleaned_data['sub_goal2']
-            subgoal2.sub_id = 2
-
-            subgoal2.save()
-
-            ################################
-            subgoal3 = SubGoal()
-            subgoal3.main_goal = maingoal
-            subgoal3.sub_goal = main_form.cleaned_data['sub_goal3']
-            subgoal3.sub_id = 3
-
-            subgoal3.save()
-
-            ################################
-            subgoal4 = SubGoal()
-            subgoal4.main_goal = maingoal
-            subgoal4.sub_goal = main_form.cleaned_data['sub_goal4']
-            subgoal4.sub_id = 4
-
-            subgoal4.save()
-
-            ################################
-            subgoal5 = SubGoal()
-            subgoal5.main_goal = maingoal
-            subgoal5.sub_goal = main_form.cleaned_data['sub_goal5']
-            subgoal5.sub_id = 5
-
-            subgoal5.save()
-
-            ################################
-            subgoal6 = SubGoal()
-            subgoal6.main_goal = maingoal
-            subgoal6.sub_goal = main_form.cleaned_data['sub_goal6']
-            subgoal6.sub_id = 6
-
-            subgoal6.save()
-
-            ################################
-            subgoal7 = SubGoal()
-            subgoal7.main_goal = maingoal
-            subgoal7.sub_goal = main_form.cleaned_data['sub_goal7']
-            subgoal7.sub_id = 7
-
-            subgoal7.save()
-
-            ################################
-            subgoal8 = SubGoal()
-            subgoal8.main_goal = maingoal
-            subgoal8.sub_goal = main_form.cleaned_data['sub_goal8']
-            subgoal8.sub_id = 8
-
-            subgoal8.save()
+            if sub_form1.is_valid():
+                for index in range(1, 9):
+                    subgoal = SubGoal()
+                    subgoal.main_goal = maingoal
+                    subgoal.sub_goal = main_form.cleaned_data['sub_goal' + str(index)]
+                    subgoal.sub_id = index
+                    subgoal.save()
+            # ################################
+            # subgoal1 = SubGoal()
+            # subgoal1.main_goal = maingoal
+            # subgoal1.sub_goal = main_form.cleaned_data['sub_goal1']
+            # subgoal1.sub_id = 1
+            #
+            # subgoal1.save()
+            #
+            # ################################
+            # subgoal2 = SubGoal()
+            # subgoal2.main_goal = maingoal
+            # subgoal2.sub_goal = main_form.cleaned_data['sub_goal2']
+            # subgoal2.sub_id = 2
+            #
+            # subgoal2.save()
+            #
+            # ################################
+            # subgoal3 = SubGoal()
+            # subgoal3.main_goal = maingoal
+            # subgoal3.sub_goal = main_form.cleaned_data['sub_goal3']
+            # subgoal3.sub_id = 3
+            #
+            # subgoal3.save()
+            #
+            # ################################
+            # subgoal4 = SubGoal()
+            # subgoal4.main_goal = maingoal
+            # subgoal4.sub_goal = main_form.cleaned_data['sub_goal4']
+            # subgoal4.sub_id = 4
+            #
+            # subgoal4.save()
+            #
+            # ################################
+            # subgoal5 = SubGoal()
+            # subgoal5.main_goal = maingoal
+            # subgoal5.sub_goal = main_form.cleaned_data['sub_goal5']
+            # subgoal5.sub_id = 5
+            #
+            # subgoal5.save()
+            #
+            # ################################
+            # subgoal6 = SubGoal()
+            # subgoal6.main_goal = maingoal
+            # subgoal6.sub_goal = main_form.cleaned_data['sub_goal6']
+            # subgoal6.sub_id = 6
+            #
+            # subgoal6.save()
+            #
+            # ################################
+            # subgoal7 = SubGoal()
+            # subgoal7.main_goal = maingoal
+            # subgoal7.sub_goal = main_form.cleaned_data['sub_goal7']
+            # subgoal7.sub_id = 7
+            #
+            # subgoal7.save()
+            #
+            # ################################
+            # subgoal8 = SubGoal()
+            # subgoal8.main_goal = maingoal
+            # subgoal8.sub_goal = main_form.cleaned_data['sub_goal8']
+            # subgoal8.sub_id = 8
+            #
+            # subgoal8.save()
 
             return redirect('board:board_list')
     else:
         # main_form = MainForm()
         sub_form1 = SubForm1()
+        sub_form2 = SubForm2()
 
     return render(request, 'board/board_new.html', {
         # 'main_form': main_form,
         'sub_form1': sub_form1,
+        'sub_form2': sub_form2,
     })
