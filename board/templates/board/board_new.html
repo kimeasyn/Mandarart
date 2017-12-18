@@ -288,7 +288,6 @@
                                 <input type="text" name="main_goal" maxlength="20" required="" id="id_main_goal">
                             </td>
                             <td>
-                                <button class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
                             </td>
                         </tr>
                         <tr>
@@ -297,7 +296,6 @@
                                 <input type="text" name="writer" maxlength="30" required="" id="id_writer">
                             </td>
                             <td>
-                                <button type="button" class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
                             </td>
                         </tr>
                         {% for index in '12345678' %}
@@ -307,7 +305,7 @@
                                     <input type="text" name="sub_goal{{ index }}" maxlength="30" required="" id="id_sub_goal{{ index }}">
                                 </td>
                                 <td>
-                                    <button type="button" class="sub_toggle_btn" id="sub1_toggle_btn"><div> >> </div></button>
+                                    <button type="button" class="sub_toggle_btn" id="sub{{ index }}_toggle_btn"><div> >> </div></button>
                                 </td>
                             </tr>
                         {% endfor %}

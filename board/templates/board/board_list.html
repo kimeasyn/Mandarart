@@ -10,7 +10,7 @@
                     <div class="card border-primary mb-3" style="max-width: 20rem;">
                         <div class="card-header">{{ goal.ins_dt|timesince }}전 작성</div>
                         <div class="card-body text-primary">
-                            <h4 class="card-title">{{ goal.writer }}님의 {{ goal.main_goal }}</h4>
+                            <h4 class="card-title"><a href="{% url "board:board_detail" goal.id %}">{{ goal.writer }}님의 {{ goal.main_goal }}</a></h4>
                             <p class="card-text"></p>
                         </div>
                     </div>
