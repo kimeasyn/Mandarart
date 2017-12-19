@@ -3,7 +3,7 @@
     <table>
         <tr>
             {% for goal in board_list %}
-                {% if forloop.counter|divisibleby:6 %}
+                {% if forloop.counter0|divisibleby:5 %}
                     </tr><tr>
                 {% endif %}
                 <td>
