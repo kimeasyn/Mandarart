@@ -21,7 +21,7 @@
 #main_input{
     float: left;
 }
-#sub_input{
+.sub_input{
     float: left;
     display: none;
 }

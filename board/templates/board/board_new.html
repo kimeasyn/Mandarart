@@ -305,7 +305,7 @@
                                     <input type="text" name="sub_goal{{ index }}" maxlength="30" required="" id="id_sub_goal{{ index }}">
                                 </td>
                                 <td>
-                                    <button type="button" class="sub_toggle_btn" id="sub{{ index }}_toggle_btn"><div> >> </div></button>
+                                    <button type="button" class="sub_toggle_btn" id="sub_toggle_btn{{ index }}"><div> >> </div></button>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -314,26 +314,26 @@
                     <input class="btn btn-primary" type="submit">
                 </form>
             </div>
-            <div id="button_area">
-            </div>
-            <div id="sub_input" class="sub_input">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{ sub_form1.as_table }}
-                    </table>
-                    <input class="btn btn-primary" type="submit">
-                </form>
-            </div>
-            <div id="sub_input" class="sub_input">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{ sub_form1.as_table }}
-                    </table>
-                    <input class="btn btn-primary" type="submit">
-                </form>
-            </div>
+            {% for sub_form in sub_forms %}
+                <div id="sub_input{{ forloop.counter }}" class="sub_input">
+                    <h3>세부목표 {{ forloop.counter }}</h3>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <table>
+                            {{ sub_form.as_table }}
+                        </table>
+                    </form>
+                </div>
+            {% endfor %}
+{#            <div id="sub_input" class="sub_input">#}
+{#                <form action="" method="POST">#}
+{#                    {% csrf_token %}#}
+{#                    <table>#}
+{#                        {{ sub_form1.as_table }}#}
+{#                    </table>#}
+{#                    <input class="btn btn-primary" type="submit">#}
+{#                </form>#}
+{#            </div>#}
         </div>
     </div>
 {% endblock %}

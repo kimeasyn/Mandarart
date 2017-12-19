@@ -14,9 +14,13 @@ function setEvent(){
         });
     });
 
-    $('#sub1_toggle_btn').click(function(){
-        $('#sub_input').toggle("slide");
-    });
+    for(var i=1;i<9;i++){
+
+        $('#sub' + i.toString() + '_toggle_btn').click(function(){
+            $('#sub_input' + i.toString()).toggle("slide");
+        });
+
+    }
 
 }
 
