@@ -13,14 +13,30 @@ function setEvent(){
             input.val('');
         });
     });
-
-    for(var i=1;i<9;i++){
-
-        $('#sub' + i.toString() + '_toggle_btn').click(function(){
-            $('#sub_input' + i.toString()).toggle("slide");
-        });
-
-    }
+    $('#sub_toggle_btn1').click(function(){
+        $('#sub_input1').toggle("slide");
+    });
+    $('#sub_toggle_btn2').click(function(){
+        $('#sub_input2').toggle("slide");
+    });
+    $('#sub_toggle_btn3').click(function(){
+        $('#sub_input3').toggle("slide");
+    });
+    $('#sub_toggle_btn4').click(function(){
+        $('#sub_input4').toggle("slide");
+    });
+    $('#sub_toggle_btn5').click(function(){
+        $('#sub_input5').toggle("slide");
+    });
+    $('#sub_toggle_btn6').click(function(){
+        $('#sub_input6').toggle("slide");
+    });
+    $('#sub_toggle_btn7').click(function(){
+        $('#sub_input7').toggle("slide");
+    });
+    $('#sub_toggle_btn8').click(function(){
+        $('#sub_input8').toggle("slide");
+    });
 
 }
 
