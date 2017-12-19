@@ -46,7 +46,7 @@ function setInputTagChangeEvent(){
 
     for(var i = 1; i < 9; i++){
         var source_id = "#id_sub_goal" + i.toString();
-        var target_id = "#sub_goal_cell" + i.toString();
+        var target_id = ".sub_goal_cell" + i.toString();
         setChangeEvent(source_id, target_id);
     }
 
