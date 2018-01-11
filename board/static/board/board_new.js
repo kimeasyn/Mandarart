@@ -44,11 +44,20 @@ function setInputTagChangeEvent(){
 
     setChangeEvent("#id_main_goal", "#main_goal_cell");
 
+    var source_id = "";
+    var target_id = "";
     for(var i = 1; i < 9; i++){
-        var source_id = "#id_sub_goal" + i.toString();
-        var target_id = ".sub_goal_cell" + i.toString();
+        source_id = "#id_sub_goal" + i.toString();
+        target_id = ".sub_goal_cell" + i.toString();
         setChangeEvent(source_id, target_id);
+
+        for(var j = 1; j < 9; j++){
+            source_id = "#id_ach_way" + i.toString() + j.toString();
+            target_id = "#ach_way" + i.toString() + j.toString();
+            setChangeEvent(source_id, target_id);
+        }
     }
+
 
 }
 function startpage() {

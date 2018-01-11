@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import MainGoal, SubGoal, AchWay
 from django.shortcuts import get_object_or_404
-from .forms import MainForm, SubForm
+from .forms import MainForm, SubForm1, SubForm2, SubForm3, SubForm4, SubForm5, SubForm6, SubForm7, SubForm8
 # Create your views here.
 
 
@@ -64,14 +64,14 @@ def board_new(request):
 
             return redirect('board:board_list')
     else:
-        sub_form1 = SubForm()
-        sub_form2 = SubForm()
-        sub_form3 = SubForm()
-        sub_form4 = SubForm()
-        sub_form5 = SubForm()
-        sub_form6 = SubForm()
-        sub_form7 = SubForm()
-        sub_form8 = SubForm()
+        sub_form1 = SubForm1()
+        sub_form2 = SubForm2()
+        sub_form3 = SubForm3()
+        sub_form4 = SubForm4()
+        sub_form5 = SubForm5()
+        sub_form6 = SubForm6()
+        sub_form7 = SubForm7()
+        sub_form8 = SubForm8()
 
     return render(request, 'board/board_new.html', {
         'sub_forms': (sub_form1, sub_form2, sub_form3, sub_form4,
