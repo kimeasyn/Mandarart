@@ -16,9 +16,17 @@ def board_list(request):
 def board_detail(request, id):
     maingoal = get_object_or_404(MainGoal, id=id)
     subgoal_list = []
+    ach_way_list = []
     for index in range(1, 9):
         if SubGoal.objects.get(main_goal=maingoal, sub_id=index):
-            subgoal_list.append(SubGoal.objects.get(main_goal=maingoal, sub_id=index))
+            subgoal = SubGoal.objects.get(main_goal=maingoal, sub_id=index)
+            subgoal_list.append(subgoal)
+
+            for ach_index in range(1, 9):
+                if AchWay.objects.get(sub_goal=subgoal, sub_id=ach_index):
+                    ach_way_list.append((AchWay.objects.get(sub_goal=SubGoal, sub_id=ach_index)))
+                else:
+                    ach_way_list.append('')
         else:
             subgoal_list.append('')
 
@@ -33,6 +41,7 @@ def board_detail(request, id):
         'subgoal6': subgoal_list[5],
         'subgoal7': subgoal_list[6],
         'subgoal8': subgoal_list[7],
+        'ach_way_list': ach_way_list,
     })
 
 
@@ -62,6 +71,14 @@ def board_new(request):
                 subgoal.sub_goal = main_form.cleaned_data['sub_goal' + str(index)]
                 subgoal.sub_id = index
                 subgoal.save()
+
+                for index2 in range(0, 8):
+                    if sub_form_list[index2].is_valid():
+                        ach_way = AchWay()
+                        ach_way.sub_goal = subgoal
+                        ach_way.ach_way = sub_form_list[index2].cleaned_data['ach_way' + str(index2 + 1)]
+                        ach_way.sub_id = index2 + 1
+                        ach_way.save()
 
             return redirect('board:board_list')
     else:

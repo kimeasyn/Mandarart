@@ -32,6 +32,7 @@ class SubGoal(models.Model):
 class AchWay(models.Model):
     sub_goal = models.ForeignKey(SubGoal)
     ach_way = models.CharField(max_length=50)
+    sub_id = models.SmallIntegerField()
     ins_dt = models.DateTimeField(auto_now_add=True)
     upd_dt = models.DateTimeField(auto_now=True)
 
