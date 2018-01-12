@@ -13,28 +13,86 @@ function setEvent(){
             input.val('');
         });
     });
+
+    //click event bind 부분 간소화 필요
     $('#sub_toggle_btn1').click(function(){
         $('#sub_input1').toggle("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn2').click(function(){
+        $('#sub_input1').hide("slide");
         $('#sub_input2').toggle("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn3').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
         $('#sub_input3').toggle("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn4').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
         $('#sub_input4').toggle("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn5').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
         $('#sub_input5').toggle("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn6').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
         $('#sub_input6').toggle("slide");
+        $('#sub_input7').hide("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn7').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
         $('#sub_input7').toggle("slide");
+        $('#sub_input8').hide("slide");
     });
     $('#sub_toggle_btn8').click(function(){
+        $('#sub_input1').hide("slide");
+        $('#sub_input2').hide("slide");
+        $('#sub_input3').hide("slide");
+        $('#sub_input4').hide("slide");
+        $('#sub_input5').hide("slide");
+        $('#sub_input6').hide("slide");
+        $('#sub_input7').hide("slide");
         $('#sub_input8').toggle("slide");
     });
 

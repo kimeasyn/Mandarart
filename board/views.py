@@ -39,15 +39,16 @@ def board_detail(request, id):
 def board_new(request):
     if request.method == 'POST':
         main_form = MainForm(request.POST)
-        sub_form1 = SubForm(request.POST)
-        sub_form2 = SubForm(request.POST)
-        sub_form3 = SubForm(request.POST)
-        sub_form4 = SubForm(request.POST)
-        sub_form5 = SubForm(request.POST)
-        sub_form6 = SubForm(request.POST)
-        sub_form7 = SubForm(request.POST)
-        sub_form8 = SubForm(request.POST)
+        sub_form1 = SubForm1(request.POST)
+        sub_form2 = SubForm2(request.POST)
+        sub_form3 = SubForm3(request.POST)
+        sub_form4 = SubForm4(request.POST)
+        sub_form5 = SubForm5(request.POST)
+        sub_form6 = SubForm6(request.POST)
+        sub_form7 = SubForm7(request.POST)
+        sub_form8 = SubForm8(request.POST)
 
+        sub_form_list = [sub_form1, sub_form2, sub_form3, sub_form4, sub_form5, sub_form6, sub_form7, sub_form8]
         if main_form.is_valid():
             maingoal = MainGoal()
             maingoal.main_goal = main_form.cleaned_data['main_goal']
