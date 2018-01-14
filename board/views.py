@@ -76,7 +76,7 @@ def board_new(request):
                     if sub_form_list[index2].is_valid():
                         ach_way = AchWay()
                         ach_way.sub_goal = subgoal
-                        ach_way.ach_way = sub_form_list[index2].cleaned_data['ach_way' + str(index2 + 1)]
+                        ach_way.ach_way = sub_form_list[index2].cleaned_data['ach_way' + str(index) + str(index2 + 1)]
                         ach_way.sub_id = index2 + 1
                         ach_way.save()
 
