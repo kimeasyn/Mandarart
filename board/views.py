@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import MainGoal, SubGoal, AchWay
 from django.shortcuts import get_object_or_404
 from .forms import MainForm, SubForm1, SubForm2, SubForm3, SubForm4, SubForm5, SubForm6, SubForm7, SubForm8
+from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
 
@@ -18,7 +19,7 @@ def board_detail(request, id):
     subgoal_list = []
     ach_way_list = []
     for index in range(1, 9):
-        if SubGoal.objects.get(main_goal=maingoal, sub_id=index):
+        try :
             subgoal = SubGoal.objects.get(main_goal=maingoal, sub_id=index)
             subgoal_list.append(subgoal)
 
@@ -27,7 +28,7 @@ def board_detail(request, id):
                     ach_way_list.append((AchWay.objects.get(sub_goal=SubGoal, sub_id=ach_index)))
                 else:
                     ach_way_list.append('')
-        else:
+        except ObjectDoesNotExist:
             subgoal_list.append('')
 
     # achway11 = AchWay.objects.get(sub_goal=subgoal1, id=1)

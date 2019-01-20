@@ -20,6 +20,6 @@ from django.conf.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^board/', include('board.urls', namespace='board')),
+    url(r'^board/', include(('board.urls', 'board'), namespace='board')),
     url(r'^$', lambda r: redirect('board:board_list'), name='root'),
 ]

@@ -1,8 +1,8 @@
 {% extends 'board/layout.html' %}
 {% block script %}
     {% load static %}
-    <script type="text/javascript" src="{% static "board/board_new.js" %}">
-    </script>
+    <script type="text/javascript" src="{% static "board/board_new.js" %}"></script>
+    <script type="text/javascript" src="{% static "board/assets/script/vue.js" %}"></script>
 
 {% endblock %}
 {% block banner %}
@@ -16,263 +16,263 @@
             <table id="goal_table">
                 <tr id="line1" class="table-active">
                     <td>
-                        <div id="ach_way11"></div>
+                        <div id="ach_way11">[/goal.ach[0][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way12"></div>
+                        <div id="ach_way12">[/goal.ach[0][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way13"></div>
+                        <div id="ach_way13">[/goal.ach[0][2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way21"></div>
+                        <div id="ach_way21">[/goal.ach[1][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way22"></div>
+                        <div id="ach_way22">[/goal.ach[1][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way23"></div>
+                        <div id="ach_way23">[/goal.ach[1][2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way31"></div>
+                        <div id="ach_way31">[/goal.ach[2][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way32"></div>
+                        <div id="ach_way32">[/goal.ach[2][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way33"></div>
+                        <div id="ach_way33">[/goal.ach[2][2]/]</div>
                     </td>
                 </tr>
                 <tr id="line2" class="table-active">
                     <td>
-                        <div id="ach_way14"></div>
+                        <div id="ach_way14">[/goal.ach[0][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell1"></div>
+                        <div class="sub_goal_cell1">[/goal.sub[0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way15"></div>
+                        <div id="ach_way15">[/goal.ach[0][4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way24"></div>
+                        <div id="ach_way24">[/goal.ach[1][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell2"></div>
+                        <div class="sub_goal_cell2">[/goal.sub[1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way25"></div>
+                        <div id="ach_way25">[/goal.ach[1][4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way34"></div>
+                        <div id="ach_way34">[/goal.ach[2][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell3"></div>
+                        <div class="sub_goal_cell3">[/goal.sub[2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way35"></div>
+                        <div id="ach_way35">[/goal.ach[2][4]/]</div>
                     </td>
                 </tr>
                 <tr id="line3" class="table-active">
                     <td>
-                        <div id="ach_way16"></div>
+                        <div id="ach_way16">[/goal.ach[0][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way17"></div>
+                        <div id="ach_way17">[/goal.ach[0][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way18"></div>
+                        <div id="ach_way18">[/goal.ach[0][7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way26"></div>
+                        <div id="ach_way26">[/goal.ach[1][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way27"></div>
+                        <div id="ach_way27">[/goal.ach[1][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way28"></div>
+                        <div id="ach_way28">[/goal.ach[1][7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way36"></div>
+                        <div id="ach_way36">[/goal.ach[2][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way37"></div>
+                        <div id="ach_way37">[/goal.ach[2][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way38"></div>
+                        <div id="ach_way38">[/goal.ach[2][7]/]</div>
                     </td>
                 </tr>
                 <tr id="line4" class="table-active">
                     <td>
-                        <div id="ach_way41"></div>
+                        <div id="ach_way41">[/goal.ach[3][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way42"></div>
+                        <div id="ach_way42">[/goal.ach[3][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way43"></div>
+                        <div id="ach_way43">[/goal.ach[3][2]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell1"></div>
+                        <div class="sub_goal_cell1">[/goal.sub[0]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell2"></div>
+                        <div class="sub_goal_cell2">[/goal.sub[1]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell3"></div>
+                        <div class="sub_goal_cell3">[/goal.sub[2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way51"></div>
+                        <div id="ach_way51">[/goal.ach[4][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way52"></div>
+                        <div id="ach_way52">[/goal.ach[4][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way53"></div>
+                        <div id="ach_way53">[/goal.ach[4][2]/]</div>
                     </td>
                 </tr>
                 <tr id="line5" class="table-active">
                     <td>
-                        <div id="ach_way44"></div>
+                        <div id="ach_way44">[/goal.ach[3][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell4"></div>
+                        <div class="sub_goal_cell4">[/goal.sub[3]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way45"></div>
+                        <div id="ach_way45">[/goal.ach[3][4]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell4"></div>
+                        <div class="sub_goal_cell4">[/goal.sub[3]/]</div>
                     </td>
                     <td>
-                        <div id="main_goal_cell"></div>
+                        <div id="main_goal_cell">[/goal.main/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell5"></div>
+                        <div class="sub_goal_cell5">[/goal.sub[4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way54"></div>
+                        <div id="ach_way54">[/goal.ach[4][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell5"></div>
+                        <div class="sub_goal_cell5">[/goal.sub[4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way55"></div>
+                        <div id="ach_way55">[/goal.ach[4][4]/]</div>
                     </td>
                 </tr>
                 <tr id="line6" class="table-active">
                     <td>
-                        <div id="ach_way46"></div>
+                        <div id="ach_way46">[/goal.ach[3][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way47"></div>
+                        <div id="ach_way47">[/goal.ach[3][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way48"></div>
+                        <div id="ach_way48">[/goal.ach[3][7]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell6"></div>
+                        <div class="sub_goal_cell6">[/goal.sub[5]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell7"></div>
+                        <div class="sub_goal_cell7">[/goal.sub[6]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell8"></div>
+                        <div class="sub_goal_cell8">[/goal.sub[7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way56"></div>
+                        <div id="ach_way56">[/goal.ach[4][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way57"></div>
+                        <div id="ach_way57">[/goal.ach[4][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way58"></div>
+                        <div id="ach_way58">[/goal.ach[4][7]/]</div>
                     </td>
                 </tr>
                 <tr id="line7" class="table-active">
                     <td>
-                        <div id="ach_way61"></div>
+                        <div id="ach_way61">[/goal.ach[5][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way62"></div>
+                        <div id="ach_way62">[/goal.ach[5][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way63"></div>
+                        <div id="ach_way63">[/goal.ach[5][2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way71"></div>
+                        <div id="ach_way71">[/goal.ach[6][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way72"></div>
+                        <div id="ach_way72">[/goal.ach[6][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way73"></div>
+                        <div id="ach_way73">[/goal.ach[6][2]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way81"></div>
+                        <div id="ach_way81">[/goal.ach[7][0]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way82"></div>
+                        <div id="ach_way82">[/goal.ach[7][1]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way83"></div>
+                        <div id="ach_way83">[/goal.ach[7][2]/]</div>
                     </td>
                 </tr>
                 <tr id="line8" class="table-active">
                     <td>
-                        <div id="ach_way64"></div>
+                        <div id="ach_way64">[/goal.ach[5][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell6"></div>
+                        <div class="sub_goal_cell6">[/goal.sub[5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way65"></div>
+                        <div id="ach_way65">[/goal.ach[5][4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way74"></div>
+                        <div id="ach_way74">[/goal.ach[6][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell7"></div>
+                        <div class="sub_goal_cell7">[/goal.sub[6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way75"></div>
+                        <div id="ach_way75">[/goal.ach[6][4]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way84"></div>
+                        <div id="ach_way84">[/goal.ach[7][3]/]</div>
                     </td>
                     <td>
-                        <div class="sub_goal_cell8"></div>
+                        <div class="sub_goal_cell8">[/goal.sub[7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way85"></div>
+                        <div id="ach_way85">[/goal.ach[7][4]/]</div>
                     </td>
                 </tr>
                 <tr id="line9" class="table-active">
                     <td>
-                        <div id="ach_way66"></div>
+                        <div id="ach_way66">[/goal.ach[5][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way67"></div>
+                        <div id="ach_way67">[/goal.ach[5][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way68"></div>
+                        <div id="ach_way68">[/goal.ach[5][7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way76"></div>
+                        <div id="ach_way76">[/goal.ach[6][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way77"></div>
+                        <div id="ach_way77">[/goal.ach[6][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way78"></div>
+                        <div id="ach_way78">[/goal.ach[6][7]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way86"></div>
+                        <div id="ach_way86">[/goal.ach[7][5]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way87"></div>
+                        <div id="ach_way87">[/goal.ach[7][6]/]</div>
                     </td>
                     <td>
-                        <div id="ach_way88"></div>
+                        <div id="ach_way88">[/goal.ach[7][7]/]</div>
                     </td>
                 </tr>
             </table>
@@ -285,7 +285,8 @@
                         <tr>
                             <th>핵심 목표 :</th>
                             <td>
-                                <input type="text" name="main_goal" maxlength="20" required="" id="id_main_goal">
+                                <input type="text" name="main_goal" maxlength="20" required="" id="id_main_goal"
+                                       v-model="goal.main">
                             </td>
                             <td>
                             </td>
@@ -302,7 +303,8 @@
                             <tr>
                                 <th>세부 목표 {{ index }} :</th>
                                 <td>
-                                    <input type="text" name="sub_goal{{ index }}" maxlength="30" required="" id="id_sub_goal{{ index }}">
+                                    <input type="text" name="sub_goal{{ index }}" maxlength="30" required="" id="id_sub_goal{{ index }}"
+                                           v-model="goal.sub[{{ index|add:"-1" }}]">
                                 </td>
                                 <td>
                                     <button type="button" class="sub_toggle_btn" id="sub_toggle_btn{{ index }}"><div> >> </div></button>

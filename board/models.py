@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 class MainGoal(models.Model):
@@ -19,7 +19,7 @@ class MainGoal(models.Model):
 
 
 class SubGoal(models.Model):
-    main_goal = models.ForeignKey(MainGoal)
+    main_goal = models.ForeignKey(MainGoal, on_delete=models.CASCADE)
     sub_id = models.SmallIntegerField()
     sub_goal = models.CharField(max_length=30)
     ins_dt = models.DateTimeField(auto_now_add=True)
@@ -30,7 +30,7 @@ class SubGoal(models.Model):
 
 
 class AchWay(models.Model):
-    sub_goal = models.ForeignKey(SubGoal)
+    sub_goal = models.ForeignKey(SubGoal, on_delete=models.CASCADE)
     ach_way = models.CharField(max_length=50)
     sub_id = models.SmallIntegerField()
     ins_dt = models.DateTimeField(auto_now_add=True)

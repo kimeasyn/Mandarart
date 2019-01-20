@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'debug_toolbar',
     'board',
 ]
 
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'mandarart.urls'
@@ -79,17 +81,17 @@ WSGI_APPLICATION = 'mandarart.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS':{
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-        'NAME': 'Mandarart',
-        'USER': 'heejin',
-        'PASSWORD': 'gmlwls00',
-        'HOST': 'localhost',
-        'PORT': ''
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'OPTIONS':{
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        # },
+        # 'NAME': 'Mandarart',
+        # 'USER': 'heejin',
+        # 'PASSWORD': 'gmlwls00',
+        # 'HOST': 'localhost',
+        # 'PORT': ''
     }
 }
 
